@@ -1,0 +1,34 @@
+<html>
+   <head>
+       <title>Zadanie 28</title>
+       <meta charset="utf-8">
+      <script type="text/javascript">
+         function autobus_iwasieczko(marka_iwasieczko,kola_iwasieczko,model_iwasieczko)//poczatek konstruktora
+         {
+         this.iwasieczko=marka_iwasieczko;
+         this.uczen=kola_iwasieczko;
+         this.kacper=model_iwasieczko;
+         }//koniec konstruktora
+         
+         autobus_iwasieczko.prototype.wypisz = function () //definicja metody
+         
+         {
+         alert(this.iwasieczko + ' ' + this.kacper+ ' ' + this.uczen);
+         };
+          
+         var autobus1 = new autobus_iwasieczko("Mercedes,", "6 kół. ", "CapaCity,"); // nowy obiekt osoba1
+         var autobus2 = new autobus_iwasieczko('Solaris,', '4 koła. ', 'Urbino 12,');
+          
+         autobus1.wypisz(); // uruchomienie metody wypisz() dotyczacej osoby 1
+         autobus2.wypisz();
+          
+         document.write("Dane techniczne autobusów:"+"<br>");
+         document.write("<b>Autobus 1:</b>"+" "+autobus1.iwasieczko+" "+autobus1.kacper+" "+autobus1.uczen);
+         document.write(" <b>Autobus 2:</b>"+" "+autobus2.iwasieczko+" "+autobus2.kacper+" "+autobus2.uczen);
+      </script>
+   </head>
+   <body>
+      <br>
+      Autobus
+   </body>
+</html>
